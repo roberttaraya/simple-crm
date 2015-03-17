@@ -7,7 +7,7 @@ module Simple
       error: "alert alert-danger"
     }
     def flash_class(level)
-      FLASH_CLASSES(level)
+      FLASH_CLASSES[level]
     end
   end
 end
