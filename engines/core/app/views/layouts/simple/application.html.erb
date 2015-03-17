@@ -2,13 +2,25 @@
 <html>
 <head>
   <title>Core</title>
-  <%= stylesheet_link_tag    "core/application", media: "all" %>
-  <%= javascript_include_tag "core/application" %>
+  <%= stylesheet_link_tag    "simple/application", media: "all" %>
+  <%= javascript_include_tag "simple/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to 'SimpleCRM', simple.root_path, class: 'navbar-brand' %>
+      </div>
+    </div>
+  </nav>
 
-<%= yield %>
+  <div class="container" role="main">
+    <div class="jumbotron">
+      <%= yield %>
+    </div>
+  </div>
+
 
 </body>
 </html>
