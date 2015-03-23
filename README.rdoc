@@ -1,3 +1,4 @@
 == README
 
 This is a simple CRM app that I'm creating to learn how to build a rails project using a modular structure using rails engines.
+

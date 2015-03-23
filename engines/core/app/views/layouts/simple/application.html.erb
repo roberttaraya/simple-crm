@@ -17,6 +17,9 @@
             <ul class="nav navbar-nav">
               <li class="<%= active(simple.root_path) %>"><%= link_to 'Home', simple.root_path %></li>
               <li class="<%= active(simple.edit_user_registration_path) %>"><%= link_to 'My Account', simple.edit_user_registration_path %></li>
+              <%- if current_user.admin? %>
+                <li class="<%= active(simple.admin_path) %>"><%= link_to 'Admin', simple.admin_path %></li>
+              <% end %>
               <li><%= link_to 'Logout', simple.destroy_user_session_path, method: :delete %></li>
             </ul>
           </div>
