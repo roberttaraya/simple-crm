@@ -1,0 +1,12 @@
+<ul class="nav nav-pills navbar-right">
+  <li role="presentation" class="<%= active(simple.admin_path) %>">
+    <%= link_to 'Dashboard', simple.admin_path %>
+  </li>
+  <li role="presentation" class="<%= active(simple.admin_users_path) %>">
+    <%= link_to simple.admin_users_path do %>
+      Users
+      <span class="badge"><%= Simple::User.count %></span>
+    <% end %>
+  </li>
+</ul>
+<div class='clearfix'></div>
